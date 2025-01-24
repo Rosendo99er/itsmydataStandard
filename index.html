@@ -31,6 +31,9 @@
   :root {
   
     --rules-customer: itsmydata; 
+    --rules-context: SupportStandard;
+    --temperature: 1.0;
+    
     --company-name: "itsmydata GmbH";
     --company-street: "Birkenleiten 43";
     --company-city: "81543 München";
@@ -254,6 +257,9 @@
   :root {
   
     --rules-customer: creamco; 
+    --rules-context: SalesGlobal;
+    --temperature: 1.0;
+
     --company-name: "cream collection Stephan Vila";
     --company-street: "Roswithastraße 28";
     --company-city: "45131 Essen";
@@ -475,6 +481,10 @@
   :root {
   
     --rules-customer: creamco; 
+    --rules-context: SchuldnerGlobal;
+    --temperature: 0.3;
+
+
     --company-name: "cream collection Stephan Vila";
     --company-street: "Roswithastraße 28";
     --company-city: "45131 Essen";
@@ -691,7 +701,10 @@
   
 :root {
   
-  --rules-customer: crefoMünchen; 
+  --rules-customer: crefoMünchen;
+  --rules-context: SchuldnerGlobal;
+  --temperature: 0.3;
+
   --company-name: "Creditreform München";
   --company-street: "Machtlfinger Straße 13";
   --company-city: "81379 München";
@@ -909,6 +922,9 @@
 :root {
   
   --rules-customer: crefoMünchenSales; 
+  --rules-context: SalesGlobal;
+  --temperature: 1.0;
+
   --company-name: "Creditreform München";
   --company-street: "Machtlfinger Straße 13";
   --company-city: "81379 München";
@@ -1145,13 +1161,7 @@
   
   /* ++++++++++++++++++++++++ Anwendung Chati free ++++++++++++++++++++++++ */
   
-  :root {
-  --rules-context: SchuldnerGlobal;
-  --temperature: 0.3;
-  }
-  
-
-  
+    
   html, body {
     font-family: var(--company-font-family);
     background-color: var(--primary-background-color);
@@ -1595,12 +1605,7 @@
   
   /* ++++++++++++++++++++++++ Anwendung Chati Sales ++++++++++++++++++++++++ 
   
-  :root {
-  --rules-context: SalesGlobal; 
-  --temperature: 1.0;
-  }
-
-  
+   
 
   #video-container {
     width: 100%;
@@ -2047,11 +2052,7 @@
   
   /* ++++++++++++++++++++++++ Anwendung Chatbot mit Kontaktformular ++++++++++++++++++++++++ 
   
-  :root {
-  --rules-context: SchuldnerGlobal;
-  --temperature: 0.3;
-  }
-  
+    
   #video-container {
         display: none;
   }
@@ -3665,10 +3666,7 @@
   
   /* ++++++++++++++++++++++++ Anwendung Chatbot mit Outlook ++++++++++++++++++++++++ 
   
-  :root {
-  --rules-context: ChatbotOutlook; 
-  }
-  
+   
   #logo-header {
       display: none;
   }
