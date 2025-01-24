@@ -4021,7 +4021,10 @@
     font-size: 12px !important;
   }
   
-      
+
+  .popup-button {
+      display: none !important;
+  }
       
       
   #chatbot-consent-label {
@@ -5511,6 +5514,27 @@
       background-color: var(--secondary-button-color);
   }
   
+
+  .popup-button {
+      font-family: var(--company-font-family);
+      font-size: var(--font-size-button);
+      padding: 10px 20px;
+      border: none;
+      border-radius: var(--primary-button-border-radius);
+      background-color: var(--primary-button-color);
+      color: var(--tertiary-font-color);
+      cursor: pointer;
+      min-width: 150px;
+      text-align: center;
+  }
+  
+  
+  .popup-button:hover {
+      background-color: var(--secondary-button-color);
+  }
+
+
+
   
   /* verhindert, dass Felder mit autofill einen automatischen Background bekommen */
   input:-webkit-autofill,
@@ -6438,7 +6462,7 @@
   </div>
   
   <div id="popup-demonstrator" class="footer-left">
-    <button class="modal-standard-button" style="margin: 15px 0px 0px 15px;" onclick="openPopup()">Popup</button>
+    <button class="popup-button" style="margin: 15px 0px 0px 15px;" onclick="openPopup()">Popup</button>
   </div>
 
   
