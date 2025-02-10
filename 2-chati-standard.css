@@ -199,7 +199,7 @@ html, body {
     overflow: hidden !important; 
     box-sizing: border-box; 
     width: 100%;
-    height: calc(100vh - calc(var(--media-company-logo-height) + 20px + 40px + 10px)) !important;
+    height: calc(100vh - calc(var(--media-company-logo-height) + 20px + 40px + 55px)) !important;
     /*Berechnung der Höhe: 100vh minus Logo-Höhe plus 20px Puffer + 40px für iframe-Header + 10px Rand */
     /*min-height: 80vh !important;*/
     z-index: 10000000 !important;    
