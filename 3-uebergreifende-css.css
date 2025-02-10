@@ -45,6 +45,10 @@
 
 
 
+
+
+
+
 /* Für kleine Bildschirme (maximale Breite: 850px) */
 @media screen and (max-width: 850px) {
 
@@ -454,10 +458,63 @@
     display: none !important;
   }
 
-  .impressum-footer-small {
+  /*.impressum-footer-small {
     display: none;
+  }*/
+  
+
+  .impressum-footer-small {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    position: relative !important;
+    min-height: 5vh !important;
+    padding: 0px 0px 15px 25px !important;
+    margin: 0 !important;
+    flex-direction: column;
+    width: 990px !important;
+    margin: 0 auto !important;
+    align-self: flex-start !important;
   }
   
+  .impressum-link-small {
+    position: relative;
+    font-family: var(--company-font-family);
+    font-weight: bold;
+    font-size: var(--font-size-text);
+    color: var(--primary-font-color);
+  }
+  
+  .impressum-link-small:hover {
+    color: var(--secondary-font-color);
+  }
+
+
+  #section-container {
+    display: flex;
+    flex-grow: 1 !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-background-color) !important;
+    border: 0px solid var(--secondary-border-color) !important;
+    border-radius: 0 !important;
+    overflow: hidden !important; 
+    box-sizing: border-box; 
+    width: 100%;
+    height: calc(100vh - calc(var(--media-company-logo-height) + 20px + 40px + 55px)) !important;
+    /*height: auto !important;*/
+    /*Berechnung der Höhe: 100vh minus Logo-Höhe plus 20px Puffer + 40px für iframe-Header + 10px Rand */
+    /*min-height: 80vh !important;*/
+    border-radius: 0px 0px var(--primary-border-radius) var(--primary-border-radius) !important;
+    z-index: 10000000 !important;
+  }
+
+
+
+
+
 
   
 }
@@ -469,6 +526,9 @@
   .impressum-footer-small {
     display: none;
 }
+
+
+
 }
 
 #chatbot-messages::before {
@@ -599,13 +659,17 @@ body.modal-open {
 
 
 #chatbot-container {
+  flex: 1;
+  display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  height: 100px;
   max-height: 100%;
   box-sizing: border-box;
   overflow: hidden;
   padding: 0px 9px 0px 8px;
+  margin-bottom: 20px;
 }
 
 
@@ -735,9 +799,10 @@ body.modal-open {
 
 
 #chatbot {
+  flex-grow: 1;
   width: 100%;
   height: 100%;
-  max-height: 70%;
+  max-height: 100%;
   /*max-height: 500px;*/
   border: 2px solid var(--secondary-border-color);
   border-radius: var(--primary-border-radius);
@@ -881,6 +946,7 @@ body.modal-open {
 #chatbot-messages {
   position: relative;
   flex-grow: 1;
+  height: 100%;
   overflow-y: auto;
   border-bottom: 0px solid var(--primary-border-color);
   box-sizing: border-box;
@@ -1013,8 +1079,8 @@ body.modal-open {
   border-radius: 0px 0px var(--primary-border-radius) var(--primary-border-radius);
   margin-top: 10px;
   z-index: 2;
+  min-height: 80px !important;
 }
-
 
 
 #chatbot-input-inner-container {
@@ -2204,5 +2270,4 @@ z-index: 1000000;
   transform: translateY(100vh);
 }
 }
-
 */
