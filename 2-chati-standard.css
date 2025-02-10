@@ -191,15 +191,16 @@ html, body {
 
   #section-container {
     display: flex;
+    flex-grow: 1 !important;
     align-items: flex-start;
     justify-content: center;
-    background-color: green !important; /*var(--primary-background-color);*/
-    border: 2px solid var(--secondary-border-color) !important;
+    background-color: var(--primary-company-color);
+    border: 0px solid var(--secondary-border-color) !important;
     border-radius: 0 !important;
     overflow: hidden !important; 
     box-sizing: border-box; 
     width: 100%;
-    height: calc(100vh - calc(var(--media-company-logo-height) + 20px + 40px + 55px)) !important;
+    height: auto !important;
     /*Berechnung der Höhe: 100vh minus Logo-Höhe plus 20px Puffer + 40px für iframe-Header + 10px Rand */
     /*min-height: 80vh !important;*/
     z-index: 10000000 !important;    
@@ -209,17 +210,17 @@ html, body {
     flex: 1 !important;
     display: flex !important;
     width: 100% !important;
-    height: 100% !important;
+    height: calc(100vh - calc(var(--media-company-logo-height) + 20px + 40px + 55px)) !important;
     flex-direction: column !important;
     max-width: 100% !important;
     min-height: 0 !important;
     max-height: 100% !important;
-    background-color: none !important; /*var(--primary-background-color);*/
+    background-color: var(--primary-background-color);
     border: 0px solid var(--primary-border-color) !important;
     border-radius: 0 !important;
     overflow: hidden; 
     box-sizing: border-box; 
-    padding: 0px;
+    padding: 0px 0px 10px 0px !important;
     z-index: 2;
   }
 
@@ -237,7 +238,7 @@ html, body {
     overflow: hidden !important;
     padding: 0px 2px 0px 2px;
     border: 0px solid var(--tertiary-border-color);
-    background-color: yellow !important;/*var(--secondary-background-color);*/
+    background-color: var(--primary-background-color) !important;
   }
 
 
@@ -251,7 +252,7 @@ html, body {
   overflow: hidden !important;
   border: 20px solid blueviolet/*var(--secondary-border-color)*/;
   border-radius: var(--primary-border-radius);
-  background-color: red !important;/*var(--secondary-background-color);*/
+  background-color: var(--secondary-background-color) !important;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
