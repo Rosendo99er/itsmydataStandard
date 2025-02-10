@@ -18,6 +18,7 @@ html, body {
     height: 10vh;
     min-height: 120px;
     background-color: var(--company-logo-background);
+    border-bottom: 2px solid var(--primary-company-color) !important;
     display: flex;
     align-items: center;
     padding-left: 20px;
@@ -146,7 +147,7 @@ html, body {
 
   html, body {
     font-family: var(--company-font-family);
-    background-color: var(--primary-background-color);
+    background-color: transparent /*var(--primary-background-color)*/ !important;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -164,6 +165,9 @@ html, body {
     height: calc(var(--media-company-logo-height) + 20px) !important;
     min-height: calc(var(--media-company-logo-height) + 20px) !important;
     background-color: var(--company-logo-background);
+    border-left: 2px solid var(--iframe-border-color) !important;
+    border-right: 2px solid var(--iframe-border-color) !important;
+    border-radius: 0 !important;
     display: flex;
     align-items: center;
     justify-content: center !important;
@@ -189,12 +193,13 @@ html, body {
     height: var(--media-company-logo-height);
   }
 
+
   #section-container {
     display: flex;
     flex-grow: 1 !important;
     align-items: flex-start;
     justify-content: center;
-    background-color: var(--primary-company-color);
+    background-color: transparent /*(--primary-background-color)*/ !important;
     border: 0px solid var(--secondary-border-color) !important;
     border-radius: 0 !important;
     overflow: hidden !important; 
@@ -210,14 +215,17 @@ html, body {
     flex: 1 !important;
     display: flex !important;
     width: 100% !important;
-    height: calc(100vh - calc(var(--media-company-logo-height) + 20px + 40px + 50px)) !important;
+    height: calc(100vh - calc(var(--media-company-logo-height) + 20px + 40px + 55px)) !important;
     flex-direction: column !important;
     max-width: 100% !important;
     min-height: 0 !important;
     max-height: 100% !important;
     background-color: var(--primary-background-color);
-    border: 0px solid var(--primary-border-color) !important;
-    border-radius: 0 !important;
+    /*border: 0px solid var(--primary-border-color) !important;*/
+    border-bottom: 2px solid var(--iframe-border-color) !important;
+    border-left: 2px solid var(--iframe-border-color) !important;
+    border-right: 2px solid var(--iframe-border-color) !important;
+    border-radius: 0px 0px 12px 12px !important;
     overflow: hidden; 
     box-sizing: border-box; 
     padding: 0px 0px 10px 0px !important;
@@ -237,7 +245,8 @@ html, body {
     box-sizing: border-box;
     overflow: hidden !important;
     padding: 0px 2px 0px 2px;
-    border: 0px solid var(--tertiary-border-color);
+    border-left: 0px solid var(--primary-company-color) !important;
+    border-right: 0px solid var(--primary-company-color) !important;
     background-color: var(--primary-background-color) !important;
   }
 
