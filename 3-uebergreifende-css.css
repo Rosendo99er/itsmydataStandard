@@ -45,8 +45,7 @@
 
 
 
-
-/* Für kleine Bildschirme (maximale Breite: 576px) */
+/* Für kleine Bildschirme (maximale Breite: 850px) */
 @media screen and (max-width: 850px) {
 
     :root {
@@ -333,6 +332,28 @@
   height: 100% !important;
 }
 
+.impressum-footer-small {
+  position: relative !important;
+  height: 100px !important;
+  padding: 25px 0px 0px 0px !important;
+}
+
+.impressum-link-small {
+  position: absolute;
+  left:25px;
+  font-family: var(--company-font-family);
+  font-weight: bold;
+  font-size: var(--font-size-text);
+  color: var(--primary-font-color);
+}
+
+.impressum-link-small:hover {
+  color: var(--secondary-font-color);
+}
+
+
+
+
 }   
 /* Ende der Media Queries */
 
@@ -384,6 +405,8 @@
   height: 100% !important;
 }
 
+
+
   
 }
 
@@ -431,12 +454,22 @@
     display: none !important;
   }
 
+  .impressum-footer-small {
+    display: none;
+  }
+  
+
   
 }
 
 /* Ende Media Queries für flache Geräte*/
 
+@media screen and (min-width: 851px) {
 
+  .impressum-footer-small {
+    display: none;
+}
+}
 
 #chatbot-messages::before {
   content: "";
@@ -1438,9 +1471,9 @@ outline: none !important;
   box-sizing: border-box !important;
   border-radius: var(--primary-border-radius) !important;
   flex-direction: column !important;
-  /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) !important;*/
   overflow: hidden !important;
   user-select: none;
+  box-shadow: 5px 5px 8px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
 
@@ -1477,9 +1510,7 @@ outline: none !important;
   height: 40px;
   padding: 10px 0px 10px 10px;
   background-color: var(--tertiary-company-color) !important;
-  border-left: 2px solid var(--iframe-border-color) !important;
-  border-right: 2px solid var(--iframe-border-color) !important;
-  border-top: 2px solid var(--iframe-border-color) !important;
+  border: 0;
   box-sizing: border-box;
   border-radius: var(--primary-company-border-radius) var(--primary-company-border-radius) 0 0 !important;
 }
