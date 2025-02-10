@@ -923,7 +923,7 @@
   
   </div>
   
-  <div id="impressum" class="impressum-footer-small">
+  <div id="impressum-footer-small" class="impressum-footer-small">
     <a href="#" class="impressum-link-small">Impressum</a>
   </div>
 
@@ -4074,7 +4074,7 @@ fileInput.addEventListener('change', function (event) {
 
 
 //Öffnen und Schließen des Kunden individuellen Impressum-Modal
-['impressum', 'impressum-small'].forEach(id => {
+['impressum', 'impressum-small', 'impressum-footer-small'].forEach(id => {
     document.getElementById(id).addEventListener('click', async () => {
     const impressumContainer = document.getElementById('impressum-container');
     impressumContainer.style.display = 'block';
